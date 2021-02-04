@@ -1,5 +1,7 @@
   node {
-
+    tools {
+        maven 'M3'
+    } 
   	stage('Build') {
 
         println "Sanity Build..."
