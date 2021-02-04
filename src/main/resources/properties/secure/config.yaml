@@ -1,0 +1,8 @@
+sfdc:
+  password: "test"
+  token: "test"
+ 
+amq:
+  url: "test"
+  clientAppID: "test"
+  clientSecret: "test"

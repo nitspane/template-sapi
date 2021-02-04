@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: template-sapi
+version: v1
+
+uses:
+  apiLib: exchange_modules/0166c1b5-939b-4fab-929b-67ae3c817b81/t-mobile-raml-library/1.0.1/t-mobile-raml-library.raml
+
+/ping:
+  get:
+    description: 
+    is: [apiLib.client-credentials-required]
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"status":"200","env":"DEV","message":"Alive"}
+  
