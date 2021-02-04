@@ -48,10 +48,9 @@ pipeline {
                     //echo "Deploy to Development: ${currentBuild.currentResult}"
                 }
                 
-                  configFileProvider([configFile(fileId: '527873a6-b745-4e5d-a996-26e39451845b', variable: 'MAVEN_SETTINGS_XML')]) {
+                //  configFileProvider([configFile(fileId: '527873a6-b745-4e5d-a996-26e39451845b', variable: 'MAVEN_SETTINGS_XML')]) {
                     // Run the maven build
-                    bat """ mvn -U --batch-mode -s $MAVEN_SETTINGS_XML \
-                        -Dmule.version=${anypointMuleVersion}  \
+                    bat """ mvn  -Dmule.version=${anypointMuleVersion}  \
                         -Danypoint.applicationName=${applicationName} \
                         -Danypoint.mule.environment=${anypointMuleEnvironment} \
                         -Danypoint.username=${anypointUsername} \
@@ -63,7 +62,7 @@ pipeline {
                         -Dcloudhub.env.client_id=${cloudhubEnvClientID} \
                         -Dcloudhub.env.client_secret=${cloudhubEnvSecretID} \
                         clean install mule:deploy -P cloudhub """
-                }
+               // }
             }
             post {
                 success {
