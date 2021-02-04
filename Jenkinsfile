@@ -57,7 +57,6 @@ pipeline {
        }
    }
    
-}
 
 void dropLocalReleaseBranch() {
     echo "Starting Drop Local Release Branch: ${env.BUILD_VERSION} ..."
