@@ -48,7 +48,7 @@ pipeline {
                     //echo "Deploy to Development: ${currentBuild.currentResult}"
                 }
                 
-                configFileProvider([configFile(fileId: '107138b1-fdbe-45c5-8eb3-64a520257c07', targetLocation: 'settings.xml', variable: 'MAVEN_SETTINGS_XML')]) {
+                  configFileProvider([configFile(fileId: '527873a6-b745-4e5d-a996-26e39451845b', variable: 'MAVEN_SETTINGS_XML')]) {
                     // Run the maven build
                     bat """ mvn -U --batch-mode -s $MAVEN_SETTINGS_XML \
                         -Dmule.version=${anypointMuleVersion}  \
