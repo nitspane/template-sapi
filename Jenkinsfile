@@ -32,7 +32,7 @@ pipeline {
                     applicationName = template-sapi
                     //echo "applicationName=${applicationName}"
                     
-                    props = readProperties(file: '/tmp/Jenkins/esapi/deploy.properties')
+                   // props = readProperties(file: '/tmp/Jenkins/esapi/deploy.properties')
                     anypointMuleVersion = '4.3.0'
                     anypointMuleEnvironment = 'SANDBOX'
                     anypointUsername = 'np_mule1'
