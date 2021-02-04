@@ -50,16 +50,16 @@ pipeline {
                     //echo "applicationName=${applicationName}"
                     
                     props = readProperties(file: '/tmp/Jenkins/esapi/deploy.properties')
-                    anypointMuleVersion = 4.3.0
-                    anypointMuleEnvironment = SandBox
-                    anypointUsername = np_mule1
-                    anypointPassword = Niharika123*
-                    cloudhubEnv = props['cloudhub.env']
-                    cloudhubRegion = us-east-2
-                    cloudhubWorkerType = MICRO
-                    cloudhubWorkers = 1
-                    cloudhubEnvClientID = 7766b70042084c3580f6472d8d6d9213
-                    cloudhubEnvSecretID = 2Ce466f2dBeA4f47a7cb2A0A8D76bc4f     
+                    anypointMuleVersion = '4.3.0'
+                    anypointMuleEnvironment = 'SANDBOX'
+                    anypointUsername = 'np_mule1'
+                    anypointPassword = 'Niharika123*'
+                    cloudhubEnv = 'SANDBOX'
+                    cloudhubRegion = 'us-east-2'
+                    cloudhubWorkerType = 'MICRO'
+                    cloudhubWorkers = '1'
+                    cloudhubEnvClientID = '7766b70042084c3580f6472d8d6d9213'
+                    cloudhubEnvSecretID = '2Ce466f2dBeA4f47a7cb2A0A8D76bc4f'     
                 
                         
                     //echo "Deploy to Development: ${currentBuild.currentResult}"
