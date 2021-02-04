@@ -25,6 +25,7 @@ pipeline {
         }
 
 		stage('Deploy to Development') {
+		    steps {
             
                   def pom = readMavenPom file: 'pom.xml'
 				  print "POM artifactId: " + pom.artifactId
@@ -42,7 +43,7 @@ pipeline {
 				  def cloudhubEnvClientID = props['cloudhub.env.client_id']
 				  def cloudhubEnvSecretID = props['cloudhub.env.client_secret']
 				  def applicationName = pom.artifactId
-                
+                }
                      
             post {
                 success {
